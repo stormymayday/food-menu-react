@@ -12,11 +12,29 @@ const App = () => {
   const [menuItems, setMenuItems] = useState(data);
   const [categories, setCategories] = useState(uniqueItemCategories);
 
+  // Filter Functionality
+  const filterItems = (category) => {
+
+    if (category === 'all') {
+      setMenuItems(data);
+      return;
+    }
+
+    const newItems = data.filter((item) => {
+
+      return item.category === category;
+
+    })
+
+    setMenuItems(newItems);
+
+  };
+
   return (
     <main>
       <section className="menu">
         <Title text='our menu' />
-        <Categories categories={categories} />
+        <Categories categories={categories} filterItems={filterItems} />
         <Menu menuItems={menuItems} />
       </section>
     </main>

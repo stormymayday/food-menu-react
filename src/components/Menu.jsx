@@ -1,3 +1,5 @@
+import MenuItem from "./MenuItem.jsx";
+
 const Menu = ({ menu }) => {
 
     console.log(menu);
@@ -10,7 +12,7 @@ const Menu = ({ menu }) => {
                 menu.map((item) => {
 
                     return (
-                        <p>{item.title}</p>
+                        <MenuItem key={item.id} {...item} />
                     );
 
                 })

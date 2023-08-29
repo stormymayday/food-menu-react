@@ -9,6 +9,7 @@ const uniqueItemCategories = ['all', ...new Set(data.map((item) => item.category
 const App = () => {
 
   const [menuItems, setMenuItems] = useState(data);
+  const [categories, setCategories] = useState(uniqueItemCategories);
 
   return (
     <main>

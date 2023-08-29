@@ -1,24 +1,24 @@
 import MenuItem from "./MenuItem.jsx";
 
-const Menu = ({ menu }) => {
-
-    console.log(menu);
+const Menu = ({ menuItems }) => {
 
     return (
 
-        <>
+        <div className="section-center">
 
             {
-                menu.map((item) => {
+                menuItems.map((menuItem) => {
 
                     return (
-                        <MenuItem key={item.id} {...item} />
+
+                        <MenuItem key={menuItem.id} {...menuItem} />
+
                     );
 
                 })
             }
 
-        </>
+        </div>
     );
 }
 

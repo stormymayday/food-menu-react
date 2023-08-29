@@ -5,13 +5,13 @@ import Menu from "./components/Menu.jsx";
 
 const App = () => {
 
-  const [menu, setMenu] = useState(data);
+  const [menuItems, setMenuItems] = useState(data);
 
   return (
     <main>
       <section className="menu">
         <Title text='our menu' />
-        <Menu menu={menu} />
+        <Menu menuItems={menuItems} />
       </section>
     </main>
   );

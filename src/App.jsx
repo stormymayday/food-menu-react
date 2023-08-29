@@ -4,7 +4,7 @@ const App = () => {
   return (
     <main>
       <section className="menu">
-        <Title />
+        <Title text='our menu' />
       </section>
     </main>
   );

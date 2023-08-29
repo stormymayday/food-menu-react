@@ -3,6 +3,9 @@ import data from './data.js';
 import Title from "./components/Title.jsx";
 import Menu from "./components/Menu.jsx";
 
+// Getting unique item categories
+const uniqueItemCategories = ['all', ...new Set(data.map((item) => item.category))];
+
 const App = () => {
 
   const [menuItems, setMenuItems] = useState(data);

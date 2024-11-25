@@ -6,10 +6,15 @@ interface MenuProps {
 }
 
 function Menu({ items }: MenuProps) {
+    if (items.length === 0) {
+        return <div className="section-center">No menu items found</div>;
+    }
+
     return (
         <div className="section-center">
-            {items.length > 0 &&
-                items.map((item) => <MenuItem key={item.id} item={item} />)}
+            {items.map((item) => (
+                <MenuItem key={item.id} item={item} />
+            ))}
         </div>
     );
 }

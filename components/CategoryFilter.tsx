@@ -7,6 +7,9 @@ interface CategoryFilterProps {
 }
 
 function CategoryFilter({ categories, filterMenuItems }: CategoryFilterProps) {
+    if (categories.length == 1 && categories[0] === "all") {
+        return null;
+    }
     return (
         <div className="btn-container">
             {categories.length > 0 &&

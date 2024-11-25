@@ -1,10 +1,16 @@
-import Title from "./Title";
+import { MenuItemType } from "@/types";
+import MenuItem from "./MenuItem";
 
-function Menu() {
+interface MenuProps {
+    items: MenuItemType[];
+}
+
+function Menu({ items }: MenuProps) {
     return (
-        <section className="menu">
-            <Title text="our menu" />
-        </section>
+        <div className="section-center">
+            {items.length > 0 &&
+                items.map((item) => <MenuItem key={item.id} item={item} />)}
+        </div>
     );
 }
 export default Menu;

@@ -12,8 +12,7 @@ const uniqueCategories = ["all", ...new Set(menu.map((item) => item.category))];
 export default function Home() {
     const [menuItems, setMenuItems] = useState<MenuItemType[]>(menu);
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [categories, setCategories] = useState(uniqueCategories);
+    const categories = uniqueCategories;
 
     const filterMenuItems = (category: string, menu: MenuItemType[]) => {
         if (category === "all") {
